@@ -73,18 +73,15 @@
          end if
       call random_seed(put=randomSeed)
 
+      samplesInside = 0
+
 !$omp parallel default(private), shared(sampleCount,samplesInside)
       ompThreadID = omp_get_thread_num()
-      samplesInside = 0 
-      call random_number(x)
-      call random_number(y)
-
 !$omp do schedule(static), reduction(+:samplesInside)
       do sampleNumber = 1, sampleCount
-         x = logistic_map(10, 4.0, x)
-         y = logistic_map(10, 4.0, y)
-         x = 178.1387e-4
-         write(*,*) x, fraction(x), x * radix(x)**(-exponent(x)) 
+         call random_number(x)
+         call random_number(y)
+         r = sqrt(x**2 + y**2)
          if (r <= 1.0) then
             samplesInside = samplesInside + 1
          end if

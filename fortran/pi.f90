@@ -1,6 +1,6 @@
 !     Estimate the value of Pi via Monte Carlo
 
-      program pi
+      program pi_serial
       use, intrinsic :: iso_fortran_env
       implicit none
 
