@@ -1,3 +1,1 @@
-# 4 $\pi$
-
-Estimate the value of $\pi$.
+# Estimate the value of $\pi$.
