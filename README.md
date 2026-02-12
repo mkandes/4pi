@@ -1,3 +1,3 @@
-# 4pi
+# 4$\pi$
 
-Estimate the value of Pi.
+Estimate the value of $\pi$.
