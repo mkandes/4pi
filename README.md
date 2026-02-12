@@ -1,1 +1,1 @@
-# Estimate the value of $\pi$.
+# Estimate the value of $\pi$
